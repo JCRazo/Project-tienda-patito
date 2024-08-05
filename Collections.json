@@ -1,0 +1,650 @@
+[
+  {
+    "v": 2,
+    "name": "api",
+    "folders": [
+      {
+        "v": 2,
+        "name": "Pedidos",
+        "folders": [],
+        "requests": [
+          {
+            "endpoint": "http://localhost:8080/api/pedidos",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "v": "5",
+            "method": "GET",
+            "testScript": "",
+            "headers": [],
+            "requestVariables": [],
+            "preRequestScript": "",
+            "params": [],
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "name": "pedidos"
+          },
+          {
+            "params": [],
+            "v": "5",
+            "method": "GET",
+            "name": "pedidos/{id}",
+            "testScript": "",
+            "auth": {
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuMSIsImlhdCI6MTcyMjczODY2MiwiZXhwIjoxNzIyODI1MDYyfQ.BdgnzIMChzu3Cye4PcGkABL2vtU58mgfFX_nWyULopw",
+              "authActive": true,
+              "authType": "bearer"
+            },
+            "endpoint": "http://localhost:8080/api/pedidos/1",
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "headers": [],
+            "preRequestScript": "",
+            "requestVariables": []
+          },
+          {
+            "endpoint": "http://localhost:8080/api/pedidos/vendedor/2",
+            "preRequestScript": "",
+            "requestVariables": [],
+            "headers": [],
+            "params": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "method": "GET",
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "v": "5",
+            "name": "pedidos/vendedor/{id}",
+            "testScript": ""
+          },
+          {
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "requestVariables": [],
+            "method": "GET",
+            "v": "5",
+            "headers": [],
+            "preRequestScript": "",
+            "name": "pedidos/cliente/{id}",
+            "testScript": "",
+            "params": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "endpoint": "http://localhost:8080/api/pedidos/cliente/2"
+          },
+          {
+            "preRequestScript": "",
+            "headers": [],
+            "requestVariables": [],
+            "endpoint": "http://localhost:8080/api/pedidos/1",
+            "v": "5",
+            "method": "DELETE",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "name": "pedidos/{id}",
+            "testScript": "",
+            "params": [],
+            "body": {
+              "body": null,
+              "contentType": null
+            }
+          },
+          {
+            "name": "pedidos",
+            "requestVariables": [],
+            "v": "5",
+            "method": "POST",
+            "headers": [],
+            "body": {
+              "body": "{\n  \"idCliente\": 1,\n  \"idVendedor\": 1,\n  \"estatus\": \"Pendiente\",\n  \"detallesPedidos\": [\n    {\n      \"producto\": {\n        \"id\": 1\n      },\n      \"cantidad\": 2,\n      \"precioUnitario\": 100.0\n    },\n    {\n      \"producto\": {\n        \"id\": 2\n      },\n      \"cantidad\": 2,\n      \"precioUnitario\": 200.0\n    }\n  ]\n}",
+              "contentType": "application/json"
+            },
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "params": [],
+            "preRequestScript": "",
+            "endpoint": "http://localhost:8080/api/pedidos"
+          },
+          {
+            "requestVariables": [],
+            "name": "pedidos/estatus/{estatus}",
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "params": [],
+            "v": "5",
+            "preRequestScript": "",
+            "headers": [],
+            "method": "GET",
+            "testScript": "",
+            "endpoint": "http://localhost:8080/api/pedidos/estatus/Pendiente"
+          },
+          {
+            "method": "PUT",
+            "requestVariables": [],
+            "params": [
+              {
+                "key": "estatus",
+                "active": true,
+                "value": "cancelado"
+              }
+            ],
+            "preRequestScript": "",
+            "endpoint": "http://localhost:8080/api/pedidos/1/actualizar-estatus",
+            "headers": [],
+            "v": "5",
+            "body": {
+              "body": "{\n  \"email\": \"seller@example.com\",\n  \"username\": \"seller\",\n  \"password\": \"1234\",\n  \"isEnabled\": true,\n  \"roles\": [\"SELLER\"]\n}",
+              "contentType": "application/json"
+            },
+            "testScript": "",
+            "name": "{id}/actualizar-estatus",
+            "auth": {
+              "authActive": true,
+              "authType": "bearer",
+              "token": ""
+            }
+          }
+        ],
+        "auth": {
+          "authActive": true,
+          "authType": "inherit"
+        },
+        "headers": []
+      },
+      {
+        "v": 2,
+        "name": "Clientes",
+        "folders": [],
+        "requests": [
+          {
+            "testScript": "",
+            "headers": [],
+            "params": [],
+            "v": "5",
+            "requestVariables": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "method": "GET",
+            "endpoint": "http://localhost:8080/api/clientes",
+            "name": "clientes",
+            "preRequestScript": ""
+          },
+          {
+            "headers": [],
+            "v": "5",
+            "testScript": "",
+            "name": "clientes/{id}",
+            "method": "GET",
+            "requestVariables": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "params": [],
+            "endpoint": "http://localhost:8080/api/clientes/1",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "preRequestScript": ""
+          },
+          {
+            "method": "GET",
+            "endpoint": "http://localhost:8080/api/clientes/nombre/María",
+            "headers": [],
+            "name": "clientes/nombre/{nombre}",
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "requestVariables": [],
+            "preRequestScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "params": [],
+            "testScript": "",
+            "v": "5"
+          },
+          {
+            "endpoint": "http://localhost:8080/api/clientes/1",
+            "name": "clientes/{id}",
+            "v": "5",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "method": "PUT",
+            "preRequestScript": "",
+            "headers": [],
+            "body": {
+              "body": "{\n  \"id\": 1,\n  \"nombre\": \"Claudia\",\n  \"apellidos\": \"González\",\n  \"email\": \"maria.gonzalez@gmail.com\",\n  \"telefono\": \"555-5678\"\n}",
+              "contentType": "application/json"
+            },
+            "requestVariables": [],
+            "testScript": "",
+            "params": []
+          },
+          {
+            "preRequestScript": "",
+            "testScript": "",
+            "requestVariables": [],
+            "name": "clientes/{id}",
+            "endpoint": "http://localhost:8080/api/clientes/1",
+            "headers": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "v": "5",
+            "params": [],
+            "method": "DELETE"
+          },
+          {
+            "endpoint": "http://localhost:8080/api/clientes",
+            "name": "clientes",
+            "testScript": "",
+            "headers": [],
+            "preRequestScript": "",
+            "requestVariables": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "v": "5",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "params": [],
+            "method": "GET"
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": []
+      },
+      {
+        "v": 2,
+        "name": "Productos",
+        "folders": [],
+        "requests": [
+          {
+            "preRequestScript": "",
+            "requestVariables": [],
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwiaWF0IjoxNzIyNzM2NzA4LCJleHAiOjE3MjI4MjMxMDh9.lZVVVxmk_yGS5W3UJEP3TTkDwq2s5F6zmyZcbtNTqO4"
+            },
+            "params": [],
+            "endpoint": "http://localhost:8080/api/productos",
+            "testScript": "",
+            "name": "productos",
+            "v": "5",
+            "method": "GET",
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "headers": []
+          },
+          {
+            "testScript": "",
+            "endpoint": "http://localhost:8080/api/productos/1",
+            "method": "GET",
+            "auth": {
+              "authActive": true,
+              "authType": "bearer",
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwiaWF0IjoxNzIyNzM2NzA4LCJleHAiOjE3MjI4MjMxMDh9.lZVVVxmk_yGS5W3UJEP3TTkDwq2s5F6zmyZcbtNTqO4"
+            },
+            "headers": [],
+            "v": "5",
+            "params": [],
+            "preRequestScript": "",
+            "requestVariables": [],
+            "name": "productos/{id}",
+            "body": {
+              "body": null,
+              "contentType": null
+            }
+          },
+          {
+            "params": [],
+            "preRequestScript": "",
+            "v": "5",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"id\": 1,\n  \"hawa\": \"ABC123\",\n  \"nombre\": \"LAPTOP LENOVO (restaurada)\",\n  \"descripcion\": \"RAM 16GB, 16INCH, INTEL CORE 5\",\n  \"precio\": 100.0,\n  \"existencias\": 10,\n  \"descuento\": 0.0,\n  \"activoDescuento\": false,\n  \"precioConDescuento\": 100.0\n}"
+            },
+            "name": "productos/{id}",
+            "method": "PUT",
+            "endpoint": "http://localhost:8080/api/productos/1",
+            "auth": {
+              "authActive": true,
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwiaWF0IjoxNzIyNzM3ODU0LCJleHAiOjE3MjI4MjQyNTR9.HxN7ljPlspbvA6JpdXN_0gKOzBJw9-yCqlSThnqFZH0",
+              "authType": "bearer"
+            },
+            "requestVariables": [],
+            "headers": []
+          },
+          {
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwiaWF0IjoxNzIyNzM2NzA4LCJleHAiOjE3MjI4MjMxMDh9.lZVVVxmk_yGS5W3UJEP3TTkDwq2s5F6zmyZcbtNTqO4"
+            },
+            "headers": [],
+            "preRequestScript": "",
+            "params": [],
+            "testScript": "",
+            "requestVariables": [],
+            "name": "productos/hawa/{hawa}",
+            "v": "5",
+            "method": "GET",
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "endpoint": "http://localhost:8080/api/productos/hawa/DEF456"
+          },
+          {
+            "testScript": "",
+            "v": "5",
+            "requestVariables": [],
+            "name": "productos/{id}",
+            "preRequestScript": "",
+            "method": "DELETE",
+            "auth": {
+              "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqdWFuIiwiaWF0IjoxNzIyNzM3ODU0LCJleHAiOjE3MjI4MjQyNTR9.HxN7ljPlspbvA6JpdXN_0gKOzBJw9-yCqlSThnqFZH0",
+              "authType": "bearer",
+              "authActive": true
+            },
+            "endpoint": "http://localhost:8080/api/productos/1",
+            "body": {
+              "body": "{\n  \"email\": \"juan@example.com\",\n  \"username\": \"juan\",\n  \"password\": \"password\",\n  \"isEnabled\": true,\n  \"roles\": [\"SELLER\"]\n}",
+              "contentType": "application/json"
+            },
+            "headers": [],
+            "params": []
+          }
+        ],
+        "auth": {
+          "authActive": true,
+          "authType": "inherit"
+        },
+        "headers": []
+      },
+      {
+        "v": 2,
+        "name": "Auditorias",
+        "folders": [],
+        "requests": [
+          {
+            "params": [],
+            "endpoint": "http://localhost:8080/api/auditorias/1",
+            "testScript": "",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "headers": [],
+            "method": "DELETE",
+            "v": "5",
+            "preRequestScript": "",
+            "requestVariables": [],
+            "name": "auditorias/{id}",
+            "body": {
+              "contentType": null,
+              "body": null
+            }
+          },
+          {
+            "testScript": "",
+            "endpoint": "http://localhost:8080/api/auditorias/entre-fechas/2024-08-02/2024-08-04",
+            "method": "GET",
+            "requestVariables": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "preRequestScript": "",
+            "v": "5",
+            "name": "auditorias/entre-fechas/",
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "params": [],
+            "headers": []
+          },
+          {
+            "preRequestScript": "",
+            "v": "5",
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "params": [],
+            "name": "auditorias/{id}",
+            "method": "GET",
+            "endpoint": "http://localhost:8080/api/auditorias/1",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "headers": [],
+            "requestVariables": [],
+            "testScript": ""
+          },
+          {
+            "method": "GET",
+            "body": {
+              "body": null,
+              "contentType": null
+            },
+            "testScript": "",
+            "params": [],
+            "v": "5",
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "requestVariables": [],
+            "headers": [],
+            "endpoint": "http://localhost:8080/api/auditorias",
+            "name": "auditorias",
+            "preRequestScript": ""
+          }
+        ],
+        "auth": {
+          "authActive": true,
+          "authType": "inherit"
+        },
+        "headers": []
+      },
+      {
+        "v": 2,
+        "name": "Vendedores",
+        "folders": [],
+        "requests": [
+          {
+            "name": "vendedores",
+            "endpoint": "http://localhost:8080/api/vendedores",
+            "testScript": "",
+            "v": "5",
+            "params": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "requestVariables": [],
+            "headers": [],
+            "preRequestScript": "",
+            "method": "GET",
+            "body": {
+              "contentType": null,
+              "body": null
+            }
+          },
+          {
+            "params": [],
+            "preRequestScript": "",
+            "headers": [],
+            "method": "GET",
+            "name": "vendedores/{id}",
+            "endpoint": "http://localhost:8080/api/vendedores/1",
+            "requestVariables": [],
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "v": "5",
+            "testScript": ""
+          },
+          {
+            "testScript": "",
+            "name": "vendedores/{id}",
+            "requestVariables": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"id\": 1,\n  \"nombre\": \"joncho\",\n  \"apellidos\": \"Pérez\",\n  \"email\": \"juan.perez@gmail.com\",\n  \"telefono\": \"555-1234\"\n}"
+            },
+            "v": "5",
+            "endpoint": "http://localhost:8080/api/vendedores/1",
+            "method": "PUT",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "headers": [],
+            "preRequestScript": "",
+            "params": []
+          },
+          {
+            "preRequestScript": "",
+            "v": "5",
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "body": {
+              "contentType": null,
+              "body": null
+            },
+            "testScript": "",
+            "method": "DELETE",
+            "requestVariables": [],
+            "params": [],
+            "headers": [],
+            "name": "vendedores/{id}",
+            "endpoint": "http://localhost:8080/api/vendedores/1"
+          }
+        ],
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "headers": []
+      },
+      {
+        "v": 2,
+        "name": "Auth",
+        "folders": [],
+        "requests": [
+          {
+            "auth": {
+              "authActive": true,
+              "authType": "inherit"
+            },
+            "name": "auth/register",
+            "method": "POST",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"email\": \"juan@example.com\",\n  \"username\": \"juan\",\n  \"password\": \"password\",\n  \"isEnabled\": true,\n  \"roles\": [\"SELLER\"]\n}"
+            },
+            "requestVariables": [],
+            "headers": [],
+            "v": "5",
+            "testScript": "",
+            "endpoint": "http://localhost:8080/api/auth/register",
+            "preRequestScript": "",
+            "params": []
+          },
+          {
+            "requestVariables": [],
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"username\": \"juan\",\n  \"password\": \"password\"\n}"
+            },
+            "testScript": "",
+            "endpoint": "http://localhost:8080/api/auth/login",
+            "method": "POST",
+            "headers": [],
+            "auth": {
+              "authType": "inherit",
+              "authActive": true
+            },
+            "name": "auth/login",
+            "preRequestScript": "",
+            "v": "5",
+            "params": []
+          }
+        ],
+        "auth": {
+          "authActive": true,
+          "authType": "inherit"
+        },
+        "headers": []
+      }
+    ],
+    "requests": [],
+    "auth": {
+      "authActive": true,
+      "authType": "none"
+    },
+    "headers": []
+  }
+]
